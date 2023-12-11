@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Font Awesome CSS (you can use a CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Professional Accordion</title>
+</head>
+<body>
+
+
+    <style>
+        body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.accordion-container {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.accordion-header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.accordion-header i {
+  margin-right: 10px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #2980b9;
+}
+
+input[type="checkbox"]:checked + label + .accordion-content {
+  display: block;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+    </style>
+
+
+<div class="accordion-container">
+  <input type="checkbox" id="section1">
+  <label class="accordion-header" for="section1">
+    <i class="fas fa-chevron-right"></i> Section 1
+  </label>
+  <div class="accordion-content">
+    <p>Content for Section 1 goes here.</p>
+  </div>
+
+  <input type="checkbox" id="section2">
+  <label class="accordion-header" for="section2">
+    <i class="fas fa-chevron-right"></i> Section 2
+  </label>
+  <div class="accordion-content">
+    <p>Content for Section 2 goes here.</p>
+  </div>
+
+  <!-- Add more accordion items as needed -->
+
+</div>
+
+</body>
+</html>

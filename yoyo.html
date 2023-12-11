@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #005bab;
+  overflow: hidden;
+}
+.input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.label {
+  position: relative;
+  text-align:center;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #e2ecf6;
+  font-size:14px;
+  font-family:Verdana;
+  font-weight: bold;
+  line-height: 6;
+  cursor: pointer;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #f4f8fc;
+  -webkit-transition: max-height .5s;
+  -o-transition: max-height .5s;
+  transition: max-height .5s;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.input:checked ~ .tab-content {
+  max-height: 10em;
+}
+/* Icon */
+.label::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.input[type=checkbox] + .label::after {
+  content: "+";
+}
+.input[type=radio] + .label::after {
+  content: "";
+}
+.input[type=checkbox]:checked + .label::after {
+  transform: rotate(315deg);
+}
+.input[type=radio]:checked + .label::after {
+  transform: rotateX(180deg);
+}
+.bottombar{
+       content: "";
+       display:block;
+       height:1em;
+       width:100%;
+       background-color:#00688B;
+}
+    </style>
+
+<div class="wrapper">
+    <div class="tab">
+       <input name="tabs" class="input" id="tab-one" type="checkbox"/>
+       <label class="label" for="tab-one">Label One</label>
+       <div class="tab-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+       </div>
+    </div>
+    <div class="tab">
+       <input name="tabs" class="input" id="tab-two" type="checkbox"/>
+       <label class="label" for="tab-two">Label Two</label>
+       <div class="tab-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+       </div>
+    </div>
+    <div class="tab">
+       <input name="tabs" class="input" id="tab-three" type="checkbox"/>
+       <label class="label" for="tab-three">Label Three</label>
+       <div class="tab-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+       </div>
+    </div>
+   <div class="bottombar"></div>
+</div>
+
+</body>
+</html>
